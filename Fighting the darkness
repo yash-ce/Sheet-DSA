@@ -1,0 +1,15 @@
+//https://practice.geeksforgeeks.org/problems/fighting-the-darkness3949/1/?category%5b%5d=Arrays&difficulty%5b%5d=-1&page=1&query=category%5b%5dArraysdifficulty%5b%5d-1page1
+
+class Solution{   
+public:
+    int maxDays(int arr[],int n){
+        // code here    
+        int num = arr[0];
+        for(int i=0;i<n;i++){
+            if(arr[i] > num){
+                num = arr[i];
+            }
+        }
+        return num;
+    }
+};
