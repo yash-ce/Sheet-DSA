@@ -1,0 +1,15 @@
+//https://www.hackerrank.com/challenges/mini-max-sum/problem
+
+
+void miniMaxSum(vector<int> arr) {
+    long long int min_sum = 0;
+    long long int max_sum = 0;
+    sort(arr.begin(), arr.end());
+    
+    for(auto it : arr){
+        min_sum += it; 
+    }
+    
+    cout<< min_sum - arr[4]<< " " <<min_sum - arr[0] <<endl; 
+
+}
