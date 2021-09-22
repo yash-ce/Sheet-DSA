@@ -1,0 +1,38 @@
+//https://practice.geeksforgeeks.org/problems/find-first-and-last-occurrence-of-x0849/1
+
+class solution
+{
+    public:
+    pair<long,long> indexes(vector<long long> v, long long x)
+    {
+        // code here
+        pair<long, long> p;
+        long long int c = 0;
+        long long int n1 = 0;
+        long long int n2 = 0;
+        for(long long int i=0;i<v.size();i++){
+            
+            if(v[i] == x && c == 0){
+                c = 10;
+                n1 = i;
+                
+            }
+            if(v[i] == x && i >= n1){
+
+                n2 = i;
+            }
+            
+        }
+        
+        if(c > 1){
+            p.first = n1;
+            p.second = n2;
+            return p;
+        }
+        else{
+            p.first = -1;
+            p.second = -1;
+            return p;
+        }
+    }
+};
