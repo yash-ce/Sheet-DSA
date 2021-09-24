@@ -1,0 +1,25 @@
+// https://practice.geeksforgeeks.org/problems/print-pattern3549/1
+
+class Solution{
+public:
+    vector<int> pattern(int N){
+        // code here
+        vector<int> v;
+        int n = N;
+        int num = 0;
+        while(N > 0){
+            v.push_back(N);
+            N = N-5;
+            
+        }
+        // v.push_back(N);
+        while(N < n){
+            v.push_back(N);
+            N = N+5;
+        }
+        v.push_back(N);
+        
+        return v;
+        
+    }
+};
