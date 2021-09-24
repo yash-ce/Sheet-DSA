@@ -1,0 +1,23 @@
+// https://practice.geeksforgeeks.org/problems/length-of-longest-subarray0440/1
+
+long long int longestSubarry(long long int A[], long long int N) {
+    
+    long long int l = 0;
+    long long int p = 0;
+    for(long long int i=0;i<N;i++){
+        if(A[i] >= 0){
+            p++;
+            // cout<<p<<" p ";
+        }
+        if(A[i] < 0){
+            p = 0;
+        }
+        
+        l = max(l, p);
+        
+        
+    }
+    
+    return l;
+    
+}
