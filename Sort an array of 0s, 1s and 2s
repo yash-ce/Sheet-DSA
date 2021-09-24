@@ -1,0 +1,30 @@
+// https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s
+
+class solution
+{
+    public:
+    void sort012(int a[], int n)
+    {
+        // coode here
+        int res[n];
+        int c=0;
+        for(int i=0;i<n;i++){
+            if(a[i] == 0){
+                res[c++] = 0; 
+            }
+        }
+        for(int i=0;i<n;i++){
+            if(a[i] == 1){
+                res[c++] = 1; 
+            }
+        }
+        for(int i=0;i<n;i++){
+            if(a[i] == 2){
+                res[c++] = 2; 
+            }
+        }
+        for(int i=0;i<n;i++){
+            a[i] = res[i];
+        }
+    }
+};
