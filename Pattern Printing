@@ -1,0 +1,15 @@
+//  https://practice.geeksforgeeks.org/problems/pattern-printing1347/1
+class solution
+{
+public:
+    void printPattern(int N)
+    {
+        // Write Your Code here
+        for(int i=1;i<=N;i++){
+            for(int j=0;j<i;j++){
+                cout<<"*";
+            }
+            cout<<" ";
+        }
+    }
+};
